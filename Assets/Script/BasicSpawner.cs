@@ -16,6 +16,7 @@ public struct NetworkInputData : INetworkInput //플레이어의 입력 데이터를 담는 �
     public NetworkButtons buttons; //마우스 클릭 버튼 입력 저장
     public Vector3 direction; //wasd키 입력에 따른 이동 방향(벡터)을 저장
 }
+
 public class BasicSpawner : MonoBehaviour, INetworkRunnerCallbacks
 {
     private NetworkRunner _runner; //네트워크 관리
@@ -28,82 +29,82 @@ public class BasicSpawner : MonoBehaviour, INetworkRunnerCallbacks
     public GameObject connectionMenu; //메뉴 전체를 담는 패널
     public void OnConnectedToServer(NetworkRunner runner)
     {
-       
+
     }
 
     public void OnConnectFailed(NetworkRunner runner, NetAddress remoteAddress, NetConnectFailedReason reason)
     {
-       
+
     }
 
     public void OnConnectRequest(NetworkRunner runner, NetworkRunnerCallbackArgs.ConnectRequest request, byte[] token)
     {
-        
+
     }
 
     public void OnCustomAuthenticationResponse(NetworkRunner runner, Dictionary<string, object> data)
     {
-       
+
     }
 
     public void OnDisconnectedFromServer(NetworkRunner runner, NetDisconnectReason reason)
     {
-        
+
     }
 
     public void OnHostMigration(NetworkRunner runner, HostMigrationToken hostMigrationToken)
     {
-       
+
     }
 
     public void OnInputMissing(NetworkRunner runner, PlayerRef player, NetworkInput input)
     {
-        
+
     }
 
     public void OnObjectEnterAOI(NetworkRunner runner, NetworkObject obj, PlayerRef player)
     {
-        
+
     }
 
     public void OnObjectExitAOI(NetworkRunner runner, NetworkObject obj, PlayerRef player)
     {
-        
+
     }
 
     public void OnReliableDataProgress(NetworkRunner runner, PlayerRef player, ReliableKey key, float progress)
     {
-       
+
     }
 
     public void OnReliableDataReceived(NetworkRunner runner, PlayerRef player, ReliableKey key, ArraySegment<byte> data)
     {
-        
+
     }
 
     public void OnSceneLoadDone(NetworkRunner runner)
     {
-        
+
     }
 
     public void OnSceneLoadStart(NetworkRunner runner)
     {
-       
+
     }
 
     public void OnSessionListUpdated(NetworkRunner runner, List<SessionInfo> sessionList)
     {
-        
+
     }
 
     public void OnShutdown(NetworkRunner runner, ShutdownReason shutdownReason)
     {
-        
+
     }
 
     public void OnUserSimulationMessage(NetworkRunner runner, SimulationMessagePtr message)
     {
-        
+
     }
 
     void Start()
@@ -151,7 +152,7 @@ public class BasicSpawner : MonoBehaviour, INetworkRunnerCallbacks
             SceneManager = gameObject.AddComponent<NetworkSceneManagerDefault>()
 
         });
-        
+
 
     }
     [SerializeField]

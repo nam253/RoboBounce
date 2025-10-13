@@ -20,7 +20,7 @@ public class CameraFollow : MonoBehaviour
         if( _target == null )
         {
             //Player.Local은 입력 권한이 있는 '내 캐릭터'를 가르킨다
-            if(PlayerPrefs.Local != null)
+            if(Player.Local != null)
             {
                 _target = Player.Local.transform;
                 Debug.Log("Camera target found: " +  _target.name); 
