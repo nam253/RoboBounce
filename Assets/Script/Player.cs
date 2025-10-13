@@ -62,7 +62,7 @@ public class Player : NetworkBehaviour
                 // 이 값(1.0f)을 조절하여 원하는 높이를 맞출 수 있습니다.
                 Vector3 spawnPosition = transform.position + new Vector3(0, 1.0f, 0);
 
-                if (data.buttons.IsSet(NetworkInputData.MOUSEBUTTON0))
+                if (data.buttons.IsSet(NetworkInputData.JUMP))
                 {
                     delay = TickTimer.CreateFromSeconds(Runner, 0.5f);
                     //Runner.Spawn(_prefabBall, spawnPosition + _forward, Quaternion.LookRotation(_forward), Object.InputAuthority, (runner, o) => { o.GetComponent<Ball>().Init(Object.InputAuthority); });

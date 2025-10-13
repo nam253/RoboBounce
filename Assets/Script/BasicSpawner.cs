@@ -10,10 +10,10 @@ using UnityEngine.UI;
 
 public struct NetworkInputData : INetworkInput //플레이어의 입력 데이터를 담는 용도
 {
-    public const byte MOUSEBUTTON0 = 1; //마우스 왼쪽 버튼을 숫자 1로 부르기로 약속
-    public const byte MOUSEBUTTON1 = 2;
+    public const byte JUMP = 1; //스페이스바 입력을 숫자 1로 부르기로 약속
 
-    public NetworkButtons buttons; //마우스 클릭 버튼 입력 저장
+
+    public NetworkButtons buttons; //스페이스바 클릭 버튼 입력 저장
     public Vector3 direction; //wasd키 입력에 따른 이동 방향(벡터)을 저장
 }
 
@@ -179,13 +179,11 @@ public class BasicSpawner : MonoBehaviour, INetworkRunnerCallbacks
         }
 
     }
-    private bool _mouseButton0;
-    private bool _mouseButton1;
+    private bool _jumpButton;
 
     private void Update()
     {
-        _mouseButton0 = _mouseButton0 || Input.GetMouseButton(0);
-        _mouseButton1 = _mouseButton1 || Input.GetMouseButton(1);
+        _jumpButton = _jumpButton || Input.GetKeyDown(KeyCode.Space);
     }
 
     public void OnInput(NetworkRunner runner, NetworkInput input)
@@ -204,10 +202,8 @@ public class BasicSpawner : MonoBehaviour, INetworkRunnerCallbacks
         if (Input.GetKey(KeyCode.D))
             data.direction += Vector3.right;
 
-        data.buttons.Set(NetworkInputData.MOUSEBUTTON0, _mouseButton0);
-        _mouseButton0 = false;
-        data.buttons.Set(NetworkInputData.MOUSEBUTTON1, _mouseButton1);
-        _mouseButton1 = false;
+       data.buttons.Set(NetworkInputData.JUMP, _jumpButton);
+        _jumpButton = false;
 
         input.Set(data);
     }
