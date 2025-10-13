@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 
 public struct NetworkInputData : INetworkInput //플레이어의 입력 데이터를 담는 용도
@@ -22,8 +23,8 @@ public class BasicSpawner : MonoBehaviour, INetworkRunnerCallbacks
     private NetworkRunner _runner; //네트워크 관리
 
     //UI요소와 연결할 변수
-    public InputField playerNameField; //플레이어 이름 입력창
-    public InputField roomNameField; //방 이름 입력창
+    public TMP_InputField playerNameField; //플레이어 이름 입력창
+    public TMP_InputField roomNameField; //방 이름 입력창
     public Button hostButton; //호스트 버튼
     public Button joinButton;
     public GameObject connectionMenu; //메뉴 전체를 담는 패널
