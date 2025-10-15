@@ -437,6 +437,57 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7641865363630646605, guid: f184ba4911fbaaa4195a4f967a69e3bf, type: 3}
+--- !u!1 &313469887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 313469889}
+  - component: {fileID: 313469888}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &313469888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313469887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7b61ed74b05dd40b01073e85b4c47f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectionPanel: {fileID: 2065452756}
+  playerNameInput: {fileID: 771363399}
+  roomNameInput: {fileID: 1208813359}
+  hostButton: {fileID: 746738303}
+  joinButton: {fileID: 776191052}
+  _playerPrefab:
+    RawGuidValue: 851731121adc9ef4c947eb86b06d52f6
+--- !u!4 &313469889
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313469887}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -119.29015, y: 23.719254, z: 28.902908}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &339995405
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,19 +1217,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 746738304}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1032492706}
-        m_TargetAssemblyTypeName: BasicSpawner, Assembly-CSharp
-        m_MethodName: OnHostButtonClicked
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &746738304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1552,19 +1591,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 776191053}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1032492706}
-        m_TargetAssemblyTypeName: BasicSpawner, Assembly-CSharp
-        m_MethodName: OnJoinButtonClicked
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &776191053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1739,57 +1766,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 799813268}
   m_CullTransparentMesh: 1
---- !u!1 &1032492704
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1032492705}
-  - component: {fileID: 1032492706}
-  m_Layer: 0
-  m_Name: Basic Spawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1032492705
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1032492704}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -34.002, y: 2.814, z: -16.814}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1032492706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1032492704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d7b61ed74b05dd40b01073e85b4c47f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerNameField: {fileID: 771363399}
-  roomNameField: {fileID: 1208813359}
-  hostButton: {fileID: 746738303}
-  joinButton: {fileID: 776191052}
-  connectionMenu: {fileID: 2065452756}
-  _playerPrefab:
-    RawGuidValue: 851731121adc9ef4c947eb86b06d52f6
 --- !u!1 &1140098638
 GameObject:
   m_ObjectHideFlags: 0
@@ -3774,6 +3750,6 @@ SceneRoots:
   - {fileID: 611914881}
   - {fileID: 2053612825}
   - {fileID: 4882846824313789456}
-  - {fileID: 1032492705}
   - {fileID: 2065452760}
   - {fileID: 123086428}
+  - {fileID: 313469889}
